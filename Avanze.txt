@@ -1,0 +1,2 @@
+Se instalo el sfml y un ejemplo en el, tiene librerias de graficos y sonido, etc.
+Se probo tambien la libreria WinBGI usando su libreria Graphics para graficar dos rectas.
