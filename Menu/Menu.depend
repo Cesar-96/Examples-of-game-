@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1573736670 source:d:\c++\menu\main.cpp
+	<iostream>
+	<stdio.h>
+	<cstdlib>
+	<windows.h>
+	<mmsystem.h>
+	"menu.h"
+	<time.h>
+
+1573736726 d:\c++\menu\include\menu.h
+	<iostream>
+	<conio.h>
+	<windows.h>
+	<mmsystem.h>
+
