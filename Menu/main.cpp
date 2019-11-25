@@ -5,9 +5,112 @@
 #include<mmsystem.h>
 #include "menu.h"
 #include <time.h>
+#include <conio.h>
 
 
 using namespace std;
+#define ARRIBA    72
+#define IZQUIERDA 75
+#define DERECHA   77
+#define ABAJO     80
+#define ESC		  27
+
+/*
+void gotoxy(int x, int y)// fincion que posiciona el cursor en la consola
+{
+	HANDLE hCon;
+	COORD dwPos;
+
+	dwPos.X = x;
+	dwPos.Y = y;
+	hCon = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleCursorPosition(hCon, dwPos);
+}
+*/
+
+void pintarMarcoGrande()
+{
+	//lineas horizontales
+	for (int i = 2; i < 118; i++)
+	{
+		gotoxy(i, 1);
+		printf("%c", 205);
+	}
+
+	for (int i = 2; i < 118; i++)
+	{
+		gotoxy(i, 30);
+		printf("%c", 205);
+	}
+	//lineas verticales
+	for (int j = 2; j <= 30; j++)
+	{
+		gotoxy(1, j);
+		printf("%c", 186);
+	}
+	for (int j = 1; j <= 30; j++)
+	{
+		gotoxy(118, j);
+		printf("%c", 186);
+	}
+
+	//Esquinas superiores
+	gotoxy(1, 1);
+	printf("%c", 201);
+
+	gotoxy(118, 1);
+	printf("%c", 187);
+
+	//esquinas inferiores
+	gotoxy(1, 30);
+	printf("%c", 200);
+
+	gotoxy(118, 30);
+	printf("%c", 188);
+
+}
+void pintarMarcoChico()
+{
+	//lineas horizontales
+	for (int i = 3; i < 116; i++)
+	{
+		gotoxy(i, 3);
+		printf("%c", 205);
+	}
+
+	for (int i = 3; i < 116; i++)
+	{
+		gotoxy(i, 28);
+		printf("%c", 205);
+	}
+	//lineas verticales
+	for (int j = 3; j <= 28; j++)
+	{
+		gotoxy(3, j);
+		printf("%c", 186);
+	}
+	for (int j = 3; j <= 28; j++)
+	{
+		gotoxy(116, j);
+		printf("%c", 186);
+	}
+
+	//Esquinas superiores
+	gotoxy(3, 3);
+	printf("%c", 201);
+
+	gotoxy(116, 3);
+	printf("%c", 187);
+
+	//esquinas inferiores
+	gotoxy(3, 28);
+	printf("%c", 200);
+
+	gotoxy(116, 28);
+	printf("%c", 188);
+
+
+}
 
 void opcion1();
 void opcion2();
@@ -15,14 +118,32 @@ void opcion3();
 void opcionb1();
 void opcionb2();
 
+class Rectangulo
+{
+
+    private:
+    int largo, ancho;
+
+    public: //metodos
+    Rectangulo(int,int);//Constructor de la clase
+    //metodos:
+    //void perimetro();
+    //void area();
+};
+
+
+
 int main(){
+
     //PlaySound(TEXT("max.wav"),NULL,SND_SYNC);
     int op;
+//    Rectangulo base(12,12);
 
     do{
 
         system("cls");
-
+        pintarMarcoGrande();
+        pintarMarcoChico();
         op = menu(50, 10, "ADIVINO TU NUMERO", "PIENSA UN NUMERO ENTRE EN 1-10", "PIENSA UN NUMERO ENTRE EL 1-100", "EXIT");
 
         switch(op){

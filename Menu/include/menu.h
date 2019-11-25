@@ -3,6 +3,7 @@
 #include <windows.h>  // Libreria para que sirva la funcion gotoxy();
 #include<mmsystem.h>
 
+
 using namespace std;
 
 void gotoxy(int x,int y){  // Funcion para mover el cursor

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1573736670 source:d:\c++\menu\main.cpp
+1574636946 source:d:\c++\menu\main.cpp
 	<iostream>
 	<stdio.h>
 	<cstdlib>
@@ -7,8 +7,27 @@
 	<mmsystem.h>
 	"menu.h"
 	<time.h>
+	<conio.h>
 
-1573736726 d:\c++\menu\include\menu.h
+1574350660 d:\c++\menu\include\menu.h
+	<iostream>
+	<conio.h>
+	<windows.h>
+	<mmsystem.h>
+
+1574350878 d:\c++\menu\include\rectangulo.h
+
+1574636946 source:d:\c++\examples of game _ repositorie\examples-of-game-\menu\main.cpp
+	<iostream>
+	<stdio.h>
+	<cstdlib>
+	<windows.h>
+	<mmsystem.h>
+	"menu.h"
+	<time.h>
+	<conio.h>
+
+1574350660 d:\c++\examples of game _ repositorie\examples-of-game-\menu\include\menu.h
 	<iostream>
 	<conio.h>
 	<windows.h>
